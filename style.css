@@ -5,7 +5,8 @@
 
 body{
     font-family: 'Creepster', cursive;
-    padding: 90px 20px 0;    
+    padding: 90px 20px 0;
+    background-color: #F2E7D5;    
 }
 
 .header{
@@ -21,6 +22,7 @@ body{
     display: flex;
     justify-content: space-between;
     max-width: 992px;
+    margin: 0 auto;
 }
 
 .nav-link{
@@ -56,4 +58,66 @@ body{
  .nav-menu-link:hover{
     background-color: #6D9886;
     transition: 0.5s;
+ }
+ .nav-toggle{
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+    cursor: pointer;
+ }
+
+ .nav-menu-link:hover, .nav-menu-link_active{
+    background-color: #393E46;
+    transition: 0.5s;
+ }
+
+ @media (max-width:768px){
+    body{
+        padding-top: 70px;   
+    }
+    
+    .header{
+        height: 60px;
+    }    
+    
+     .logo{
+        font-size: 25px;        
+        padding: 0 20px;
+        line-height: 60px;
+     }
+     
+     .nav-menu{
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: #393E46;
+        position: fixed;
+        left: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        height: calc(100%-60px);
+        overflow-y: auto;
+        left: 100%;
+        transition: 0.3s;        
+     }
+    
+     .nav-menu-item{        
+        line-height: 70px;        
+     }         
+    
+     .nav-menu-link:hover{
+        background: none;
+        color: #83c5f7;
+     }
+     .nav-toggle{
+        display: block;
+     }
+     .nav-menu_visible{
+
+     }    
  }
