@@ -49,16 +49,16 @@ body{
     text-transform: uppercase;
     width: max-content;
  }
-
+ .nav-menu-link:hover{
+   background-color: #6D9886;
+   transition: 0.5s;
+}
  .nav-menu-link{
     padding: 8px 12px;
     border-radius: 3px;
  }
 
- .nav-menu-link:hover{
-    background-color: #6D9886;
-    transition: 0.5s;
- }
+ 
  .nav-toggle{
     color: white;
     background: none;
@@ -70,10 +70,10 @@ body{
     cursor: pointer;
  }
 
- .nav-menu-link:hover, .nav-menu-link_active{
-    background-color: #393E46;
-    transition: 0.5s;
- }
+ .nav-menu-link_active{
+   background: none;
+   transition: 0.5s;
+}
 
  @media (max-width:768px){
     body{
@@ -110,14 +110,15 @@ body{
         line-height: 70px;        
      }         
     
-     .nav-menu-link:hover{
+     .nav-menu-link:hover,
+    .nav-menu-link_active{
         background: none;
         color: #83c5f7;
-     }
+    }
      .nav-toggle{
         display: block;
      }
      .nav-menu_visible{
-
+      left: 0;
      }    
  }
